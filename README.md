@@ -1,78 +1,105 @@
-# React + TypeScript + Vite
+# Survey Platform — Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A web-based survey management platform built with React and TypeScript. It provides an admin interface for creating, managing, publishing, and analyzing surveys, along with a public interface for respondents.
 
-Currently, two official plugins are available:
+## Live Demo
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- **Frontend:** https://survey-frontend-ashen-three.vercel.app
+- **Backend API:** https://survey-backend-d8mr.onrender.com
 
-## React Compiler
+## Features
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
+- Admin login and protected dashboard
+- Create, edit, delete, and publish surveys
+- Multiple question types
+- Required questions and conditional question visibility
+- Public survey response submission
+- Survey response analytics
+- Search and pagination for surveys
+- Responsive user interface
 
-Note: This will impact Vite dev & build performances.
-You can also try [the experimental native React Compiler support in plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md#rust-react-compiler) by using `compiler: true` in the plugin options instead of using the Babel plugin.
+## Tech Stack
 
-## Expanding the ESLint configuration
+- React
+- TypeScript
+- Vite
+- Tailwind CSS
+- shadcn/ui
+- React Router
+- Axios
+- React Hook Form
+- Zod
+- Recharts
+- Lucide React
+- Sonner
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## Getting Started
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+### Prerequisites
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+- Node.js
+- npm
+- Git
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+### Installation
 
+Clone the repository:
+
+```bash
+git clone https://github.com/RUDRA-ani/survey-frontend.git
+cd survey-frontend
 ```
 
-You can also install [eslint-plugin-react-x](https://npmx.dev/package/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://npmx.dev/package/eslint-plugin-react-dom) for React-specific lint rules:
+Install dependencies:
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-
+```bash
+npm install
 ```
+
+### Environment Variables
+
+Create a `.env` file in the project root:
+
+```env
+VITE_API_URL=http://localhost:5000/api
+```
+
+For production, the deployed frontend uses the Render backend API:
+
+```env
+VITE_API_URL=https://survey-backend-d8mr.onrender.com/api
+```
+
+### Run Development Server
+
+```bash
+npm run dev
+```
+
+The frontend will usually be available at:
+
+```text
+http://localhost:5173
+```
+
+### Build for Production
+
+```bash
+npm run build
+```
+
+## Deployment
+
+The frontend is deployed using **Vercel**.
+
+The production environment variable `VITE_API_URL` must point to the deployed backend API.
+
+## Backend Repository
+
+[Survey Platform Backend](https://github.com/RUDRA-ani/survey-backend)
+
+## Author
+
+**Anirudra Dahal**
+
+- GitHub: [RUDRA-ani](https://github.com/RUDRA-ani)
