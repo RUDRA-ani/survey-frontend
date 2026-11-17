@@ -116,12 +116,7 @@ const submit = async (values: LoginFormValues) => {
             <div className="flex items-center justify-between gap-2">
               <Label htmlFor="password">Password</Label>
 
-              <Link
-                to="/forgot-password"
-                className="text-xs text-muted-foreground hover:text-foreground hover:underline sm:text-sm"
-              >
-                Forgot password?
-              </Link>
+        
             </div>
 
             <div className="relative">

@@ -13,8 +13,7 @@ import { ProtectedLayout } from "@/layout/ProtectedLayout";
 
 // Auth Pages
 import Login from "@/features/auth/pages/Login";
-import ForgotPassword from "@/features/auth/pages/ForgotPassword";
-
+ 
 // Dashboard Pages
 import Dashboard from "@/pages/Dashboard";
 import SurveyBuilder from "@/features/surveys/pages/SurveyBuilder";
@@ -36,8 +35,7 @@ export default function AppRoutes() {
         {/* Authentication */}
         <Route element={<AuthLayout />}>
           <Route path="/login" element={<Login />} />
-          <Route path="/forgot-password" element={<ForgotPassword />} />
-        </Route>
+         </Route>
 
         {/* Public respondent survey - no admin login */}
         <Route path="/s/:id" element={<PublicSurvey />} />
